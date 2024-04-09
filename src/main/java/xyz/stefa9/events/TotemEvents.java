@@ -11,9 +11,10 @@ public class TotemEvents implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
         Player player = e.getPlayer();
-        if(player.getInventory().containsAtLeast(ItemManager.TotemOfInventory, 1)) {
+        if(player.getInventory().containsAtLeast(ItemManager.TotemOfInventory, 1)
+                || player.getInventory().getItemInOffHand() == ItemManager.TotemOfInventory) {
             e.setKeepInventory(true);
-            e.setShouldDropExperience(false);
+            e.setShouldDropExperience(true);
 
             e.getDrops().clear();
 
