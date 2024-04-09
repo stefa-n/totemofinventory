@@ -18,6 +18,10 @@ public class Commands implements CommandExecutor {
             player.getInventory().addItem(ItemManager.TotemOfInventory);
         }
 
+        if(cmd.getName().equalsIgnoreCase("givebrokentotemofinventory")) {
+            player.getInventory().addItem(ItemManager.BrokenTotemOfInventory);
+        }
+
         return true;
     }
 }
