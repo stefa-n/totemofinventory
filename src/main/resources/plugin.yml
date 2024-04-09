@@ -1,0 +1,9 @@
+name: totemofinventory
+version: '${project.version}'
+main: xyz.stefa9.totemofinventory
+api-version: '1.20'
+commands:
+  givetotemofinventory:
+    description: Gives Totem of Inventory to the player.
+    usage: /<command>
+    permission: totemofinventory.give
